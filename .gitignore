@@ -1,0 +1,41 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+
+# Virtual Environment
+venv/
+env/
+ENV/
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Test outputs
+results.json
+output/
+input/
+
+# Test audio/video files
+*.wav
+*.mp3
+*.mp4
+*.m4a
+segments_*/
+
+# Model files (too large for git, use HuggingFace)
+accent_classifier_finetuned/
+
+# Training artifacts
+checkpoints/
+runs/
+logs/

@@ -1,0 +1,18 @@
+version: '3.8'
+
+services:
+  accent-classifier:
+    build: .
+    image: accent-classifier:latest
+    container_name: accent-classifier
+    environment:
+      - MODEL_ID=MilesPurvis/english-accent-classifier
+    volumes:
+      # Mount input directory (put your audio/video files here)
+      - ./input:/input
+      # Mount output directory (results will be saved here)
+      - ./output:/app/output
+    # Override default command to process a file
+    # Example: docker-compose run accent-classifier /input/audio.mp3 --output /app/output/results.json --verbose --pretty
+    stdin_open: true
+    tty: true
